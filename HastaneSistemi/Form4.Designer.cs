@@ -45,9 +45,9 @@
             this.txtAdSoyad = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTxtSaat = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboKanGrubu = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnKayıt
@@ -59,6 +59,7 @@
             this.btnKayıt.TabIndex = 30;
             this.btnKayıt.Text = "Kayıt Ol";
             this.btnKayıt.UseVisualStyleBackColor = true;
+            this.btnKayıt.Click += new System.EventHandler(this.btnKayıt_Click);
             // 
             // label8
             // 
@@ -280,13 +281,13 @@
             this.label1.TabIndex = 32;
             this.label1.Text = "Tarih / Saat:";
             // 
-            // maskedTextBox1
+            // maskedTxtSaat
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(704, 56);
-            this.maskedTextBox1.Mask = "00.00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(49, 22);
-            this.maskedTextBox1.TabIndex = 33;
+            this.maskedTxtSaat.Location = new System.Drawing.Point(704, 56);
+            this.maskedTxtSaat.Mask = "00.00";
+            this.maskedTxtSaat.Name = "maskedTxtSaat";
+            this.maskedTxtSaat.Size = new System.Drawing.Size(49, 22);
+            this.maskedTxtSaat.TabIndex = 33;
             // 
             // label9
             // 
@@ -298,11 +299,11 @@
             this.label9.TabIndex = 34;
             this.label9.Text = "Kan Grubu:";
             // 
-            // comboBox1
+            // comboKanGrubu
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboKanGrubu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboKanGrubu.FormattingEnabled = true;
+            this.comboKanGrubu.Items.AddRange(new object[] {
             "A Rh +",
             "A Rh -",
             "B Rh +",
@@ -311,10 +312,10 @@
             "AB Rh -",
             "0 Rh +",
             "0 Rh -"});
-            this.comboBox1.Location = new System.Drawing.Point(563, 102);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(149, 24);
-            this.comboBox1.TabIndex = 40;
+            this.comboKanGrubu.Location = new System.Drawing.Point(563, 102);
+            this.comboKanGrubu.Name = "comboKanGrubu";
+            this.comboKanGrubu.Size = new System.Drawing.Size(149, 24);
+            this.comboKanGrubu.TabIndex = 40;
             // 
             // Form4
             // 
@@ -322,9 +323,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboKanGrubu);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.maskedTxtSaat);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnKayıt);
@@ -370,8 +371,8 @@
         private System.Windows.Forms.TextBox txtAdSoyad;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTxtSaat;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboKanGrubu;
     }
 }
