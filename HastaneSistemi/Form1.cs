@@ -25,18 +25,10 @@ namespace HastaneSistemi
             this.Close();
         }
 
-        private void btnHasta_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form4 randevu = new Form4();
-            randevu.ShowDialog();
-            this.Close();
-        }
-
         private void btnYonetim_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form5 yonetici = new Form5();
+            Form4 yonetici = new Form4();
             yonetici.ShowDialog();
             this.Close();
         }

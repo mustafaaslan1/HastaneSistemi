@@ -15,26 +15,49 @@ namespace HastaneSistemi
         public Form4()
         {
             InitializeComponent();
+
+            string KullaniciAdi = txtKullanici.Text;
+            txtKullanici.KeyPress += TextBox_KeyPress;
         }
 
-        private void btnKayıt_Click(object sender, EventArgs e)
+        private void btnGizle_Click(object sender, EventArgs e)
         {
-            string AdSoyad = txtAdSoyad.Text;
-            string Dogumtarihi = maskedTxtDoğum.Text;
-            string Telefon = maskedTxtTelefon.Text;
-            string Kimlik = maskedTxtKimlik.Text;
-            string Sehir = comboŞehir.Text;
-            string KanGrubu = comboKanGrubu.Text;
-            string Sikayet = txtŞikayet.Text;
-            string Zaman = dateTimePicker1.Text + maskedTxtSaat.Text;
-            if (string.IsNullOrWhiteSpace(AdSoyad) || string.IsNullOrWhiteSpace(Dogumtarihi) || string.IsNullOrWhiteSpace(Telefon) ||
-                string.IsNullOrWhiteSpace(Kimlik) || string.IsNullOrWhiteSpace(Sehir) || string.IsNullOrWhiteSpace(KanGrubu) ||
-                string.IsNullOrWhiteSpace(Sikayet) || string.IsNullOrWhiteSpace(Zaman))
+            if (txtŞifre.UseSystemPasswordChar)
             {
-                DialogResult kaydet;
+                txtŞifre.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtŞifre.UseSystemPasswordChar = true;
+            }
+        }
 
-                kaydet = MessageBox.Show("Boş bir sekme olamaz!", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Girilen karakterin boşluk veya harf olup olmadığını kontrol et
+            if (!char.IsControl(e.KeyChar) && e.KeyChar != ' ' && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+                // // Eğer boşluk veya harf değilse, olayı işleme alma ve karakteri kabul etme
+            }
+        }
 
+        private void btnGirişYap_Click(object sender, EventArgs e)
+        {
+            string KullaniciAdi = txtKullanici.Text;
+            string Şifre = txtŞifre.Text;
+
+            if (string.IsNullOrWhiteSpace(KullaniciAdi) || string.IsNullOrWhiteSpace(Şifre))
+            {
+                DialogResult islem;
+                islem = MessageBox.Show("Kullanıcı Adı veya Şifre girmediniz!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                this.Hide();
+                Form5 yonetici = new Form5(txtKullanici.Text);
+                yonetici.ShowDialog();
+                this.Close();
             }
         }
     }

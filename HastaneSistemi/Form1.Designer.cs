@@ -31,14 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnDoktor = new System.Windows.Forms.Button();
             this.btnYonetim = new System.Windows.Forms.Button();
-            this.btnHasta = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnÇıkışYap = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -48,7 +46,7 @@
             // 
             this.btnDoktor.BackColor = System.Drawing.Color.SeaGreen;
             this.btnDoktor.Image = ((System.Drawing.Image)(resources.GetObject("btnDoktor.Image")));
-            this.btnDoktor.Location = new System.Drawing.Point(161, 172);
+            this.btnDoktor.Location = new System.Drawing.Point(235, 172);
             this.btnDoktor.Name = "btnDoktor";
             this.btnDoktor.Size = new System.Drawing.Size(128, 128);
             this.btnDoktor.TabIndex = 0;
@@ -59,23 +57,12 @@
             // 
             this.btnYonetim.BackColor = System.Drawing.Color.SeaGreen;
             this.btnYonetim.Image = ((System.Drawing.Image)(resources.GetObject("btnYonetim.Image")));
-            this.btnYonetim.Location = new System.Drawing.Point(492, 172);
+            this.btnYonetim.Location = new System.Drawing.Point(397, 172);
             this.btnYonetim.Name = "btnYonetim";
             this.btnYonetim.Size = new System.Drawing.Size(128, 128);
             this.btnYonetim.TabIndex = 2;
             this.btnYonetim.UseVisualStyleBackColor = false;
             this.btnYonetim.Click += new System.EventHandler(this.btnYonetim_Click);
-            // 
-            // btnHasta
-            // 
-            this.btnHasta.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnHasta.Image = ((System.Drawing.Image)(resources.GetObject("btnHasta.Image")));
-            this.btnHasta.Location = new System.Drawing.Point(328, 172);
-            this.btnHasta.Name = "btnHasta";
-            this.btnHasta.Size = new System.Drawing.Size(128, 128);
-            this.btnHasta.TabIndex = 1;
-            this.btnHasta.UseVisualStyleBackColor = false;
-            this.btnHasta.Click += new System.EventHandler(this.btnHasta_Click);
             // 
             // panel1
             // 
@@ -132,27 +119,17 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(187, 136);
+            this.label3.Location = new System.Drawing.Point(261, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 22);
             this.label3.TabIndex = 4;
             this.label3.Text = "Doktor";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(357, 136);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 22);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Hasta";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(516, 136);
+            this.label5.Location = new System.Drawing.Point(421, 136);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 22);
             this.label5.TabIndex = 4;
@@ -165,12 +142,10 @@
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(764, 450);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnHasta);
             this.Controls.Add(this.btnYonetim);
             this.Controls.Add(this.btnDoktor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -191,14 +166,12 @@
 
         private System.Windows.Forms.Button btnDoktor;
         private System.Windows.Forms.Button btnYonetim;
-        private System.Windows.Forms.Button btnHasta;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnÇıkışYap;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
     }
 }
